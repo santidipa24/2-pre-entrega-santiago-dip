@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+body{
+  font-family: 'Oswald', sans-serif;
+  background-color: rgb(163, 193, 255);
+
+  
+}
+
+#body{
+  min-height: 100vh;
+}
 /* reset selector de etiquetas universal, selecciona todo */
 
 
@@ -10,63 +19,82 @@
 
 
 /* selector de grupo */
-h1,
-h2,
-h3{
-    font-family: 'Roboto', sans-serif;
+h1,h2,h3{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
 }
 
 /* selector de etiquetas */
+h1{
+  font-size: 4em;
+}
+
+.p{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+}
+
+
 h2{
-    font-size: 1.8em;
+    font-size: 2.5em;
+    margin: 20px auto;
 }
 
 h3{
     font-size: 1.5em;
 }
+ nav a img{
+  width: 80px;
+ }
 
-nav{
-    background-color:rgb(0, 0, 200);
-    position:sticky;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    padding: 4px 30px;
+ nav{
+  font-weight: 600;
+  font-size: 20px;
+ }
+
+ #colorNav{
+  background-color: rgba(12, 87, 238, 0.501);
+ }
+
+footer{
+  background-color: rgba(12, 87, 238, 0.501);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
 }
 
-    nav h1{
-        color: rgb(242, 242, 242);
-        font-size: 2em;
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-    }
+footer ul{
+  width: 10%;
+  list-style: none;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  justify-content: space-between;
 
-    nav ul{
-        
-        display: inline-block;
-    }
-    nav ul li{
-      list-style:circle;
-      display:list-item;
-    }
+  
 
-        nav ul li a{
-            color: rgb(242, 242, 242);
-            font-family: 1.1m;
-            text-decoration: none;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            display: inline-block;
-            margin-right: 4px;
-        }
+}
+footer ul li{
+  margin: 0%;
+  padding: 0%;
 
-        /* hover */
-        nav ul li a:hover{
-          color: rgb(0, 0, 0);
-          font-weight: 600;
-        }
-        
+}
+
+footer ul li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: brightness(80%);
+
+}
+footer ul li a:hover{
+  filter: brightness(100%);
+}
 
 section p{
     font-size: 1em;
@@ -91,7 +119,7 @@ section p{
     color:rgb(242, 242, 242);
   }
   .bgBlue{
-    background-color: blue;
+    background-color: rgb(15, 47, 122);
   }
   .bgDark{
     background-color: rgb(101, 101, 101);
@@ -103,19 +131,54 @@ section p{
     font-weight: 600;
   }
 
+
   /* clases bem */
   .anuncio__box--white{
     text-align: center;
-    background-color: white;
+    background-color: rgb(15, 47, 122);
     /* padding */
-    padding: 6px 0;
+  padding-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   .encabezado__img--fluid{
     /* size */
-    width: 50%;
-
-
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position:start ;
+  }
+  .pMain{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .tarjeta{
+    width: 80%;
+    display: flex;
+    margin: 50px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding-bottom: 30px;
+     
+  }
+  .tarjeta img{
+    width: 80%;
+    height: 50vh;
+    border-radius: 30px;
+  }
+  
+  .tarjeta p{
+    width: 80%;
+    margin: 20px auto;
+    text-align: justify;
   }
 
   .novedades__titulo--xxl{
@@ -165,4 +228,49 @@ section p{
     width: 35px;
   }
 
+
+  form{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+
+    justify-content: center;
+  }
+
+  form textarea{
+    grid-column: 1 /span 3;
+  }
+
+  form .boton{
+    grid-column: 2/span 1;
+
+  }
+  form .boton:hover{
+    background-color: rgb(141, 163, 251);
+  }
+
+  form input, form textarea{
+  padding: 20px;
+  }
   
+
+  @media (max-width:780px){
+    form{
+      grid-template-columns: 100%;
+
+
+    }
+    form input, form text-area{
+      grid-column: 1/span 3;
+    
+    }
+  form .boton{
+    grid-column: 1/span 3;
+  }
+
+  }
+
